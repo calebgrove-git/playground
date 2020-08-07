@@ -3,9 +3,8 @@ import { useState, useEffect } from 'react';
 
 export default function Bomb(props) {
   const [count, setCount] = useState(0);
-  let interval = null;
   useEffect(() => {
-    interval = setInterval(() => {
+    const interval = setInterval(() => {
       setCount((count) => count + 1);
     }, 1000);
     return () => clearInterval(interval);
